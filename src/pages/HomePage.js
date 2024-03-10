@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from './Header'
-import Product from '../components/Products/Product'
-import products from '../components/Products/ProductsList'
+import NotInCartProduct from '../components/NotInCartProduct'
+import ProductContext from '../context/ProductContext'
 
 export default function HomePage() {
-  
+
+  const { products }= useContext(ProductContext);
+
   return (
     <div>
       <h1 className='title'>Home</h1>
@@ -12,7 +14,7 @@ export default function HomePage() {
       <div id='productGrid'>
         {products.map(product => {
           return (
-            <Product key={product.id} id={product.id} name={product.name} price={product.price} />
+            <NotInCartProduct key={product.id} id={product.id} name={product.name} price={product.price} inCart={product.inCart}/>
         )})} 
       </div>     
     </div>
