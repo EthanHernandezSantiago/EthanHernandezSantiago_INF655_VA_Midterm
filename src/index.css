@@ -1,1 +1,70 @@
+body {
+    background-color: burlywood;
+}
 
+.container {
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    background-color: bisque;
+}
+
+.title {
+    text-align: center;
+    background-color: blanchedalmond;
+    height: 3em;
+    margin: 0;
+    padding-top: 1.5em;
+}
+
+nav {
+    background-color: antiquewhite;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.productCard {
+    border: 1px solid black;
+    min-width: 10rem;
+    min-height: 15rem;
+}
+
+.productCardText {
+    padding-left: 1.5em;
+}
+
+.placeholderIMG {
+    background-color:whitesmoke;
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
+#productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+}
