@@ -2,6 +2,8 @@ body {
     background-color: burlywood;
 }
 
+/* Container Styles */
+
 .container {
     width: 80%;
     margin: auto;
@@ -9,6 +11,31 @@ body {
     background-color: bisque;
     min-height: 97vh;
 }
+
+.productCard {
+    border: 1px solid black;
+    min-width: 17em;
+    min-height: 22em;
+}
+
+.productInfo {
+    padding-left: 1.5em;
+}
+
+
+/* Pages and Grids Styles */
+
+#productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#detailPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Text Styles */
 
 .title {
     text-align: center;
@@ -18,23 +45,11 @@ body {
     padding-top: 1.5em;
 }
 
-
 .subtitle {
     padding-left: 1em;
 }
 
-#total {
-    padding-left: 2em;
-}
-
-#cartEmpty, #searchBar {
-    grid-column: 2 / 5;
-    text-align: center;
-}
-
-input {
-    padding: 1em;
-}
+/* Nav & NavLink Styles */
 
 nav {
     background-color: antiquewhite;
@@ -59,15 +74,60 @@ nav ul li a {
     color: black;
 }
 
-.productCard {
-    border: 1px solid black;
-    min-width: 10rem;
-    min-height: 15rem;
+.navLink {
+    text-decoration: none;
+    color: black;
 }
 
-.productInfo {
-    padding-left: 1.5em;
+/* Table Styles */
+
+#thankYouTable {
+    width: 80%;
+    margin: auto;
+    background-color: white;
 }
+
+table thead, tfoot {
+    background-color: black;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#detailTable {
+    width: 100%;
+    background-color: white;
+}
+
+#detailTable tbody tr:nth-child(even) {
+    background-color: grey;
+}
+
+#detailTableSection {
+    margin-top: 3.5em;
+    margin-right: 3em;
+}
+
+/* Forms Styles */
+
+#cartEmpty, #searchBarForm {
+    grid-column: 2 / 5;
+    text-align: center;
+}
+
+#searchBar {
+    width: 15%;
+}
+
+input {
+    padding: 1em;
+}
+
+
+/* Button Styles */
 
 .cartButton {
     margin-left: 1.80em;
@@ -75,21 +135,52 @@ nav ul li a {
     margin-bottom: 1em;
 }
 
-.placeholderIMG {
-    background-color:whitesmoke;
-    width: 12rem;
-    height: 12rem;
+.alignButton {
+    margin: 1em;
+    margin-left: 2em;
+    padding: .5em;
+}
+
+/* Random Styles */
+
+#total {
+    padding-left: 2em;
+}
+
+#finalPrice {
+    text-align: right;
+    padding-right:1em;
+}
+
+#searchProduct {
+    width: max-content;
     margin: auto;
+    margin-top: 2em;
+}
+
+.prodMsg {
+    padding-left: 1.75em;
+}
+
+#cartMSG {
+    padding-left: 2em;
+}
+/* PLACEHOLDERS */
+
+.productImg {
+    background-color:whitesmoke;
+    width: 14rem;
+    height: 14rem;
+    margin: 1.90em;
     border-radius: 1em;
     margin-top: 1em;
 }
 
-#productGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.navLink {
-    text-decoration: none;
-    color: black;
+.productDetailImg {
+    background-color:whitesmoke;
+    width: 30rem;
+    height: 30rem;
+    margin: 8%;
+    border-radius: 1em;
+    margin-top: 3.5em;
 }

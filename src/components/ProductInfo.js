@@ -1,17 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-
-export default function ProductInfo({ id, name, price, inCart}) {
-  const url = "/product/" + id;
+export default function ProductInfo({ p }) {
+  const url = "/product/" + p.id;
 
   return (
     <div>
-        <div className="placeholderIMG"></div>
+      <img className='productImg' src={p.img} alt={"Image of " + p.name} />
         <div className="productInfo">
-          <p>{name}</p>
-          <p>${Number.parseFloat(price).toFixed(2)}</p>
-          <p>In Cart: {inCart}</p>
+          <p>{p.name}</p>
+          <p>${Number.parseFloat(p.price).toFixed(2)}</p>
           <button><NavLink className="navLink" to={url}>Product Details</NavLink></button>
         </div>
     </div> 

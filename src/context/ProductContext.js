@@ -13,19 +13,39 @@ export const ProductProvider = ({ children }) => {
 
     function addToCart(id) {
        let temp = products.at(products.findIndex(p => p.id === id))
-       temp.inCart++;
-       setProducts([...products])
-       setTotal(total + temp.price)
+        temp.inCart++;
+        setProducts([...products])
+        setTotal(total + temp.price)
+    }
+
+    function addOneToCart(id) {
+        let temp = products.at(products.findIndex(p => p.id === id))
+        temp.inCart++;
+        setProducts([...products])
+        setTotal(total + temp.price)
+    }
+
+    function removeOneFromCart(id) {
+        let temp = products.at(products.findIndex(p => p.id === id))
+        if (temp.inCart !== 0) {
+            temp.inCart--;
+            setProducts([...products])
+            setTotal(total - temp.price)
+        }
+        else {
+            alert("Error: All " + temp.name + "s have been removed");
+        }
     }
 
     function removeFromCart(id) {
         let temp = products.at(products.findIndex(p => p.id === id))
-        temp.inCart--;
-        setProducts([...products])
-        setTotal(total - temp.price)
+        temp.inCart = 0;
+        setProducts([...products]);
      }
 
-     function findSearchProduct() {
+    function findSearchProduct() {
+        searchProductText = searchProductText.charAt(0).toUpperCase() + searchProductText.substring(1).toLowerCase();
+        setSearchProductText(searchProductText);
         let i = products.findIndex(p => p.name === searchProductText)
         if (i === -1) {
             setSearchProduct({id: -1, name: "Not Found", price: 0});
@@ -35,11 +55,19 @@ export const ProductProvider = ({ children }) => {
         }
      }
 
+    function thankYouPageCartClear() {
+        products.map(p => {
+            p.quantity = p.quantity + p.inCart;
+            p.inCart = 0;
+            return p;
+        });
+        setProducts(products);
+    }
 
     return (
         <ProductContext.Provider value={{ products, total, searchProductText, searchProduct,
             setProducts, setTotal, setSearchProductText,
-            addToCart, removeFromCart, findSearchProduct }}>
+            addToCart, addOneToCart, removeOneFromCart, removeFromCart, findSearchProduct, thankYouPageCartClear }}>
             {children}
         </ProductContext.Provider>
     )

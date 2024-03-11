@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Header from './Header'
-import NotInCartProduct from '../components/NotInCartProduct'
+import Product from '../components/Product'
 import ProductContext from '../context/ProductContext'
 
 export default function HomePage() {
@@ -9,12 +9,12 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1 className='title'>Home</h1>
+      <h1 className='title'>Home </h1>
       <Header />
       <div id='productGrid'>
         {products.map(product => {
           return (
-            <NotInCartProduct key={product.id} id={product.id} name={product.name} price={product.price} inCart={product.inCart}/>
+            <Product key={product.id} id={product.id} />
         )})} 
       </div>     
     </div>

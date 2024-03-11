@@ -4,6 +4,8 @@ import CartPage from "./pages/CartPage";
 import ProductDetailPage from "./pages/ProductDetailPage"
 import SearchPage from "./pages/SearchPage";
 import { ProductProvider } from "./context/ProductContext";
+import ThankYouPage from "./pages/ThankYouPage";
+import Checkout from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/thankyou" element={<ThankYouPage />} />
           </Routes>
         </BrowserRouter>
     </div>
