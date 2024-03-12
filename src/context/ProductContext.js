@@ -10,6 +10,10 @@ export const ProductProvider = ({ children }) => {
     let [ total , setTotal ] = useState(0);
     let [ searchProductText, setSearchProductText ] = useState('');
     let [ searchProduct, setSearchProduct ] = useState({id: -1, name: "Not Found", price: 0});
+    let [ ccNum, setccNum ] = useState(0);
+    let [ address, setAddress ] = useState('');
+    let [ townAndState, setTownAndState ] = useState('')
+    let [ zipcode, setZipcode ] = useState(0);
 
     function addToCart(id) {
        let temp = products.at(products.findIndex(p => p.id === id))
@@ -39,6 +43,7 @@ export const ProductProvider = ({ children }) => {
 
     function removeFromCart(id) {
         let temp = products.at(products.findIndex(p => p.id === id))
+        setTotal(total - (temp.price * temp.inCart))
         temp.inCart = 0;
         setProducts([...products]);
      }
@@ -62,11 +67,15 @@ export const ProductProvider = ({ children }) => {
             return p;
         });
         setProducts(products);
+        setccNum(0);
+        setAddress('');
+        setTownAndState('');
+        setZipcode(0);
     }
 
     return (
-        <ProductContext.Provider value={{ products, total, searchProductText, searchProduct,
-            setProducts, setTotal, setSearchProductText,
+        <ProductContext.Provider value={{ products, total, searchProductText, searchProduct, ccNum, address, zipcode,townAndState,
+            setProducts, setTotal, setSearchProductText, setccNum, setAddress, setZipcode, setTownAndState,
             addToCart, addOneToCart, removeOneFromCart, removeFromCart, findSearchProduct, thankYouPageCartClear }}>
             {children}
         </ProductContext.Provider>

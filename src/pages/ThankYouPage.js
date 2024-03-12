@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function ThankYouPage() {
 
-  const { products, total, thankYouPageCartClear } = useContext(ProductContext);
+  const { products, total, thankYouPageCartClear, ccNum, address, townAndState, zipcode } = useContext(ProductContext);
   
   return (
     <div>
@@ -34,7 +34,14 @@ export default function ThankYouPage() {
               <td>${Number.parseFloat(total).toFixed(2)}</td>
             </tr>
           </tfoot>
-        </table>
+        </table> 
+        <h3 className='subtitle'>Summary of Credit Card and Shipping Information</h3>
+        <div id="thankYouSummary">
+          <p>Credit Card Number - {ccNum}</p>
+          <p>Address - {address}</p>
+          <p>Town and State - {townAndState}</p>
+          <p>Zipcode - {zipcode}</p>
+        </div>
         <button onClick={e => {e.stopPropagation(); thankYouPageCartClear()}}><NavLink className="navLink" to="/">Return Home</NavLink></button>
     </div>
   )

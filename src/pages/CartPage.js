@@ -31,7 +31,7 @@ export default function CartPage() {
         }
         {productsInCart.length === 0 ? null : 
           <div>
-            <button className='alignButton'><NavLink className="navLink" to="/thankyou">SUBMIT ORDER</NavLink></button>
+            <button className='alignButton'><NavLink className="navLink" to="/checkout">CHECKOUT</NavLink></button>
             </div>
         }
 

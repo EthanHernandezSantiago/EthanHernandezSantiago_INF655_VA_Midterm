@@ -126,6 +126,20 @@ input {
     padding: 1em;
 }
 
+#checkoutForm {
+    width: 75%;
+    margin: auto;
+}
+
+#checkoutForm input {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+#checkoutForm label {
+    font-weight: bolder;
+}
+
 
 /* Button Styles */
 
@@ -165,7 +179,10 @@ input {
 #cartMSG {
     padding-left: 2em;
 }
-/* PLACEHOLDERS */
+
+#thankYouSummary {
+    padding-left: 2em;
+}
 
 .productImg {
     background-color:whitesmoke;
