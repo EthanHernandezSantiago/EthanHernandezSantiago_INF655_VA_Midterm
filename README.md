@@ -1,7 +1,8 @@
 # Front-end Web Development 2 (INF 655 VA) Midtem
 Created by: Ethan Herandez-Santiago
 ## Setup
-This project uses the following npm packages
+This project uses the following npm packages:
+
 [React-router-dom] (https://www.npmjs.com/package/react-router-dom/v/5.3.0)
 
 ```npm install react-router-dom```
