@@ -3,10 +3,15 @@ Created by: Ethan Herandez-Santiago
 ## Setup
 This project uses the following npm packages
 1) [react-router-dom] (https://www.npmjs.com/package/react-router-dom/v/5.3.0)
+
 ```npm install react-router-dom```
+
 2) [react-icons] (https://www.npmjs.com/package/react-icons)
+
 ```npm install react-icons```
+
 *) [uuid] (https://www.npmjs.com/package/uuid)
+
 ```npm install uuid```
 
 ## Notes
