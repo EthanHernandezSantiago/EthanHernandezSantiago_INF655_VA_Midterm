@@ -77,6 +77,12 @@ nav ul li a {
 .navLink {
     text-decoration: none;
     color: black;
+    padding: 1em;
+}
+
+#thankYouButton {
+    margin-left: 1.5em;
+    padding: 1em;
 }
 
 /* Table Styles */

@@ -1,19 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import productList from "../components/ProductsList";
+import CheckoutContext from "./CheckoutContext";
 
  
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
 
+    let { setccNum, setAddress, setTownAndState, setZipcode }= useContext(CheckoutContext)
+
     let [ products, setProducts ] = useState([...productList])
     let [ total , setTotal ] = useState(0);
     let [ searchProductText, setSearchProductText ] = useState('');
     let [ searchProduct, setSearchProduct ] = useState({id: -1, name: "Not Found", price: 0});
-    let [ ccNum, setccNum ] = useState(0);
-    let [ address, setAddress ] = useState('');
-    let [ townAndState, setTownAndState ] = useState('')
-    let [ zipcode, setZipcode ] = useState(0);
 
     function addToCart(id) {
        let temp = products.at(products.findIndex(p => p.id === id))
@@ -74,8 +73,8 @@ export const ProductProvider = ({ children }) => {
     }
 
     return (
-        <ProductContext.Provider value={{ products, total, searchProductText, searchProduct, ccNum, address, zipcode,townAndState,
-            setProducts, setTotal, setSearchProductText, setccNum, setAddress, setZipcode, setTownAndState,
+        <ProductContext.Provider value={{ products, total, searchProductText, searchProduct,
+            setProducts, setTotal, setSearchProductText,
             addToCart, addOneToCart, removeOneFromCart, removeFromCart, findSearchProduct, thankYouPageCartClear }}>
             {children}
         </ProductContext.Provider>

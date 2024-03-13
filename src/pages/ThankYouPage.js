@@ -3,10 +3,12 @@ import Header from './Header'
 import ProductContext from '../context/ProductContext'
 import ProductSummary from '../components/PoductSummary'
 import { NavLink } from 'react-router-dom';
+import CheckoutContext from '../context/CheckoutContext';
 
 export default function ThankYouPage() {
 
-  const { products, total, thankYouPageCartClear, ccNum, address, townAndState, zipcode } = useContext(ProductContext);
+  const { products, total, thankYouPageCartClear } = useContext(ProductContext);
+  const { ccNum, address, townAndState, zipcode } = useContext(CheckoutContext);
   
   return (
     <div>
@@ -16,10 +18,12 @@ export default function ThankYouPage() {
         <h3 className='subtitle'>Summary of your order:</h3>
         <table id="thankYouTable">
           <thead>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Amount In Cart</th>
-            <th>Total Price</th>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Amount In Cart</th>
+              <th>Total Price</th>
+            </tr>
           </thead>
           <tbody>
             {products.filter(p => p.inCart > 0).map(p => {
@@ -42,7 +46,7 @@ export default function ThankYouPage() {
           <p>Town and State - {townAndState}</p>
           <p>Zipcode - {zipcode}</p>
         </div>
-        <button onClick={e => {e.stopPropagation(); thankYouPageCartClear()}}><NavLink className="navLink" to="/">Return Home</NavLink></button>
+        <button id="thankYouButton" onClick={e => {e.stopPropagation(); thankYouPageCartClear()}}><NavLink className="navLink" to="/">Return Home</NavLink></button>
     </div>
   )
 }

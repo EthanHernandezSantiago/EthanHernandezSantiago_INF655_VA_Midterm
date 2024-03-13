@@ -14,10 +14,12 @@ export default function CheckoutPage() {
         <h2 className='subtitle'>Please Make Sure Order Is Correct</h2>
         <table id="thankYouTable">
           <thead>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Amount In Cart</th>
-            <th>Total Price</th>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Amount In Cart</th>
+              <th>Total Price</th>
+            </tr>
           </thead>
           <tbody>
             {products.filter(p => p.inCart > 0).map(p => {
