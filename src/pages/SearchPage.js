@@ -3,8 +3,9 @@ import Header from './Header'
 import ProductContext from '../context/ProductContext'
 import Product from '../components/Product'
 
-
+// page to search for product
 export default function SearchPage() {
+  // ProductContext is used to get functio to find searched product
   const { searchProductText, searchProduct, setSearchProductText, findSearchProduct } = useContext(ProductContext);
 
   return (

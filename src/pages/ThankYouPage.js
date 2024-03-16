@@ -5,9 +5,12 @@ import ProductSummary from '../components/PoductSummary'
 import { NavLink } from 'react-router-dom';
 import CheckoutContext from '../context/CheckoutContext';
 
+// page thanking user for purchase
 export default function ThankYouPage() {
-
+  
+  // ProductContext is used to get products, total, and clear function
   const { products, total, thankYouPageCartClear } = useContext(ProductContext);
+  // CheckoutContext is used to display checkout info
   const { ccNum, address, townAndState, zipcode } = useContext(CheckoutContext);
   
   return (

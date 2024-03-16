@@ -4,8 +4,11 @@ import Checkout from '../components/Checkout'
 import ProductContext from '../context/ProductContext'
 import ProductSummary from '../components/PoductSummary'
 
+// page used to checkout
 export default function CheckoutPage() {
-  let { products, total } = useContext(ProductContext);
+
+  // ProductContext is used to get product list and total
+  const { products, total } = useContext(ProductContext);
 
   return (
     <div>      

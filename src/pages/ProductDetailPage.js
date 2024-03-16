@@ -3,11 +3,14 @@ import Header from './Header'
 import { NavLink, useParams } from 'react-router-dom'
 import ProductContext from '../context/ProductContext';
 
-
+// page to show more info about a product
 export default function ProductDetailPage() {
-  
+ 
+  // product id is gotten from params
   const{ id } = useParams();
+  // ProductContext is used to get product list
   const { products } = useContext(ProductContext);
+  // p is set as the product with the id in params
   let p = products.at(products.findIndex(p => p.id === Number(id)));
   return (
     <div>

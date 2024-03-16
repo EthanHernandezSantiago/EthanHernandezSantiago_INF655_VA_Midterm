@@ -1,3 +1,4 @@
+// The only way I could find to pass the path of product img was doing this
 import Pencil from '../img/Pencil.jpg'
 import Paper from '../img/Paper.jpeg'
 import Erasor from '../img/Erasor.jpeg'
@@ -9,6 +10,7 @@ import Mouse from '../img/Mouse.png'
 import Laptop from '../img/Laptop.jpeg'
 import Book from '../img/Book.jpeg'
 
+// list of products
 let productList = [
     {id: 1, name: "Pencil", img: Pencil, price: 1.00, inCart: 0, desc: "Graphite pencil"},
     {id: 2, name: "Paper", img: Paper, price: 2.00, inCart: 0, desc: "Normal sheet of paper"},

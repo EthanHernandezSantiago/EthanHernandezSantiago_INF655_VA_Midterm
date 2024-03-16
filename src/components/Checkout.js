@@ -4,8 +4,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 
 export default function Checkout() {
-  let { ccNum, setccNum, address, setAddress, townAndState, setTownAndState, zipcode, setZipcode } = useContext(CheckoutContext);
+
+  // CheckoutContext is used to get functions to edit checkout information
+  const { ccNum, setccNum, address, setAddress, townAndState, setTownAndState, zipcode, setZipcode } = useContext(CheckoutContext);
   
+  // navigate is used to redirect the user to a different page after form is submitted
   const navigate = useNavigate();
 
   return (

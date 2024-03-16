@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 export default function ProductInfo({ p }) {
+  // used to set url for navLink
   const url = "/product/" + p.id;
 
   return (
