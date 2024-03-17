@@ -98,7 +98,7 @@ export const ProductProvider = ({ children }) => {
     // resets all products. 
     //  this is ran after user hits button on thank you page
     function thankYouPageCartClear() {
-        setProducts([... productList]);
+        setProducts([...productList]);
         setccNum(0);
         setAddress('');
         setTownAndState('');

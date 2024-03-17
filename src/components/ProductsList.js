@@ -9,6 +9,8 @@ import Sharpener from '../img/Sharpener.jpeg'
 import Mouse from '../img/Mouse.png'
 import Laptop from '../img/Laptop.jpeg'
 import Book from '../img/Book.jpeg'
+import Lamp from '../img/Lamp.jpeg'
+import Sicssor from '../img/Scissors.jpeg'
 
 // list of products
 let productList = [
@@ -21,7 +23,9 @@ let productList = [
     {id: 7, name: "Sharpener", img: Sharpener, price: 1.00, inCart: 0, desc: "Used to sharpen penicl"},
     {id: 8, name: "Mouse", img: Mouse, price: 2.00, inCart: 0, desc: "1AOGJSJ model (USB)"},
     {id: 9, name: "Laptop", img: Laptop, price: 3.00, inCart: 0, desc: "A1GA model"},
-    {id: 10, name: "Book", img: Book, price: 1.00, inCart: 0, desc: "Paper book or ebook"}
+    {id: 10, name: "Book", img: Book, price: 1.00, inCart: 0, desc: "Paper book or ebook"},
+    {id: 11, name: "Lamp", img: Lamp, price: 2.00, inCart: 0, des: "Comes in black or grey"},
+    {id: 12, name: "Sicssor", img: Sicssor, price: 3.00, inCart: 0, des: "Comes in blue or black"}
   ]
 
   export default productList;

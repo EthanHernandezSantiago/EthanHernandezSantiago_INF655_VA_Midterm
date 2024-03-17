@@ -16,7 +16,7 @@ export default function Product({ id }) {
             <ProductInfo p={p} />
             {p.inCart === 0 ? 
             <button className='cartButton' onClick={e => {e.stopPropagation(); addToCart(id)}}>Add To Cart <AiOutlineShoppingCart /></button> 
-            : <p className="prodMsg">IN CART</p> }
+            : <p className="prodMsg"><strong>IN CART</strong></p> }
         </div>
   )
 }

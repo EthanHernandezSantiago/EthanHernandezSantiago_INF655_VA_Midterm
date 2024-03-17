@@ -22,7 +22,7 @@ export default function CartPage() {
       {total === 0 ? null : 
         <div>
           <h3 id="total"><strong>Current Total: ${Number.parseFloat(total).toFixed(2)}</strong></h3>
-          <p id="cartMSG">To checkout click on SUBMIT ORDER button below</p>
+          <p id="cartMSG"><strong>To checkout click on SUBMIT ORDER button below</strong></p>
         </div>}
 
         {/* Products is outputed or, if empty, user is told cart is empty */}
