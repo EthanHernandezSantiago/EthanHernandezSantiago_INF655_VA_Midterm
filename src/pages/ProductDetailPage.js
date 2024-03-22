@@ -18,7 +18,9 @@ export default function ProductDetailPage() {
       <Header />
       <div id="detailPage">
         <section id="detailIMGSection">
-        <img className='productDetailImg' src={p.img} alt={"Image of " + p.name} />
+          <div className='flexImg'>
+            <img className='productDetailImg' src={p.img} alt={"Image of " + p.name} />
+          </div>
         </section>
         <section id="detailTableSection">
           <table id="detailTable">
