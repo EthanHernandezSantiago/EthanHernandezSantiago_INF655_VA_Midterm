@@ -11,6 +11,7 @@ This project uses the following npm packages:
 
 ```npm install react-icons```
 
+*** UUID is installed but not used ***
 *[Uuid] (https://www.npmjs.com/package/uuid)
 
 ```npm install uuid```
